@@ -1,0 +1,118 @@
+.footerSection{
+    position: relative;
+    max-width: 1403px;
+    margin: 0 auto;
+    margin-top: 240px;
+    margin-bottom: 40px;
+}
+.footerBackground{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -30;
+    opacity: .5;
+}
+.footerContainer{
+    max-width: 1210px;
+    margin: 0 auto;
+    padding: 55px 0px;
+}
+.footerContent{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.footerHeader{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 43px;
+}
+.footerHeader p{
+    line-height: 1.5;
+}
+.footerList{
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 10px 0px;
+}
+.footerLogosList{
+    margin-top: 47px;
+    display: flex;
+    gap: 20px;
+}
+.copyRights{
+    text-align: end;
+    font-size: 12px;
+}
+.footerList h1{
+    font-size: 24px;
+    background-image: linear-gradient(30deg, #fff, #DAC8FF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-weight: 600;
+    color: transparent;
+}
+.footerList li{
+    font-size: 15px;
+    margin: 15px 0px;
+}
+.footerMainLogo{
+    width: 230px;
+    height: 54px;
+}
+.footerLogosList img{
+    height: 18px;
+    width: 18px;
+}
+
+@media (min-width: 0px) and (max-width:1210px){
+    .footerSection{
+        padding: 0px 10px;
+    }
+    .footerContent{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footerSection{
+        background-color: #ffffff0a;
+    }
+    .footerBackground{
+        display: none;
+    }
+    .footerHeader{
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+    .footerList{
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        justify-content: space-around;
+    }
+    .footerList h1{
+        text-align: center;
+    }
+    .footerList li{
+        text-align: center;
+    }
+    .footerHeader p{
+        text-align: center;
+    }
+    .copyRights{
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    .footerLogosList{
+        margin-top: 10px;
+        margin-bottom: 30px;
+        display: flex;
+        gap: 20px;
+    }
+}

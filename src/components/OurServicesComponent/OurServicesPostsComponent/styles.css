@@ -1,0 +1,138 @@
+.postCardsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 36px;
+}
+
+.postCardsSection {
+    margin-top: 80px;
+}
+
+.postCard {
+    height: 390px;
+    background-color: #ffffff05;
+    backdrop-filter: blur(2px);
+    padding: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all .4s;
+}
+
+.postCard:hover {
+    transform: translateY(-20px);
+    background-color: #b85dfe5a;
+}
+
+.postCard img {
+    padding-bottom: 60px;
+}
+
+.cardLogoContainer {
+    display: flex;
+    justify-content: end;
+}
+
+.postCardContent {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+.postCardContent h5 {
+    font-size: 22px;
+    font-weight: 600;
+    background-image: linear-gradient(30deg, #FFFFFF, #DAC8FF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.postCardBody {
+    font-size: 15px;
+}
+
+.postButtonsContainer {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.postButtonsContainer button {
+    width: 100px;
+    height: 50px;
+    border: 1px solid #B95DFE;
+    background-image: linear-gradient(30deg, #FFFFFF, #DAC8FF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 19px;
+    transition: all .4s;
+    position: relative;
+    z-index: 1;
+}
+
+.postButtonsContainer button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #B95DFE;
+    z-index: -1;
+    transition: all 0.4s;
+    border-radius: 4px;
+    opacity: 0;
+}
+
+.postButtonsContainer button:hover::before {
+    opacity: 1;
+}
+
+.postButtonsContainer button:hover {
+    color: black;
+}
+
+
+@media (max-width: 1200px) {
+    .postCardsContainer {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    }
+}
+
+
+@media (max-width: 900px) {
+    .postCardsContainer {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .postCardsContainer {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .postCard {
+        height: auto; 
+        padding: 10px;
+    }
+
+    .postCard img {
+        padding-bottom: 30px; 
+    }
+
+    .postButtonsContainer {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .postButtonsContainer button {
+        width: 100%; 
+        height: 45px; 
+        font-size: 16px; 
+    }
+}

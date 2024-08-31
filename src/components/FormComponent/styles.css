@@ -1,0 +1,115 @@
+.formSection{
+    margin-top: 250px;
+}
+.formContainer{
+    position: relative;
+    max-width: 1210px;
+    height: 800px;
+    margin: 0 auto;
+    padding: 40px 60px;
+
+    display: flex;
+    justify-content: space-between;
+}
+.formContainerHeader{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.formContainerBackground{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: .5;
+    z-index: -30;
+}
+.formContainer form{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 40%;
+    justify-content: space-between;
+}
+.formElement{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.formElementContainer{
+    display: flex;
+    gap: 8px;
+    width: 100%;
+}
+.formElementContainer input{
+    width: 100%;
+}
+.formElement input{
+    background-color: #fff;
+    color: black;
+    height: 40px;
+    padding: 0px 20px;
+    font-size: 20px;
+}
+.formContainer button{
+    background-image: linear-gradient(30deg , #fff -40%, #6F26FF 95%);
+    padding: 15px 25px;
+    font-size: 20px;
+    transition: all .4s;
+}
+.formContainer button:hover{
+    transform: translateY(-6px);
+}
+.formContainerHeader h1{
+    font-size: 55px;
+    font-weight: 500;
+    background-image: linear-gradient(30deg, #ffffff, #E6C6FF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.formContainerHeader p{
+    line-height: 1.6;
+}
+
+@media (min-width: 0px) and (max-width:1210px){
+    .formContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+        gap: 40px;
+
+        background-color: #ffffff0a;
+    }
+    .formContainer h1{
+        font-size: 25px;
+        text-align: center;
+    }
+    .formContainer p{
+        font-size: 18px;
+        text-align: center;
+    }
+    .formContainerBackground{
+        display: none;
+    }
+    .formButtonContainer{
+        text-align: center;
+    }
+    .formContainerHeader{
+        width: 100%;
+    }
+    .formContainer form{
+        width: 100%;
+    }
+    .formContainer{
+        padding: 20px;
+        position: relative;
+    }
+    .formElement{
+        width: 100%;
+    }
+}

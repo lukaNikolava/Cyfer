@@ -1,0 +1,113 @@
+.resourcesComponentSection {
+    margin-top: 220px;
+    display: flex;
+    align-items: center;
+}
+
+.resourcesComponentContainer {
+    position: relative;
+    height: 490px;
+    width: 1210px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "groupMask content";
+}
+
+.groupMaskContainer {
+    position: relative;
+    height: 390px;
+    grid-area: groupMask;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.groupMaskContainer img {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.resourcesComponentContainer h2 {
+    background-image: linear-gradient(30deg, #B95DFE, #E6C6FF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    width: fit-content;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 50px;
+    border: 1px solid #B95DFE;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.resourcesComponentContainer h1 {
+    font-size: 55px;
+    background-image: linear-gradient(30deg, #FFFFFF, #DAC8FF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.resourcesComponentContainer p {
+    line-height: 1.5;
+}
+
+.resourcesComponentContent {
+    grid-area: content;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+@media (max-width: 1210px) {
+    .resourcesComponentSection{
+        padding: 0px 20px;
+    }
+    .resourcesComponentContainer {
+        height: auto; 
+        width: 100%; 
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 40px;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+            "content"
+            "groupMask";
+        justify-content: center; 
+    }
+
+    .groupMaskContainer {
+        width: 290px;
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+    }
+
+    .resourcesComponentContainer h1 {
+        font-size: 40px; 
+        text-align: center;
+    }
+
+    .resourcesComponentContainer h2 {
+        font-size: 16px;
+        text-align: center; 
+    }
+    .resourcesComponentContent{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .groupMaskContainer img {
+        position: absolute;
+        height: fit-content;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+}

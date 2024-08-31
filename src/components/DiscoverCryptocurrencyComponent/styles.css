@@ -1,0 +1,121 @@
+.discoverCryptocurrencySection{
+    height: 804px;
+    display: flex;
+    align-items: center;
+}
+.discoverCryptocurrencyContainer{
+    position: relative;
+    max-width: 1210px;
+    height: 558px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.cryptocurrencyBackground{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba( 255, 255, 255, 0.1 );
+    backdrop-filter: blur( 3.5px );
+    -webkit-backdrop-filter: blur( 3.5px );
+    border:  1px solid #ffffff6a;
+    z-index: -30;
+    clip-path: polygon( 4.13% 0.00%, 99.92% 0.00%, 100% 28.01%, 95.70% 40.16%, 49.17% 40.16%, 35.62% 60.48%, 0.00% 60.48%, 0.00% 8.80% );
+}
+.discoverCryptocurrencyContainer img{
+    position: absolute;
+    width: 539px;
+    height: 481px;
+    bottom: 0;
+    left: 0;
+}
+.discoverContantContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.discoverContantContainer h1{
+    padding: 50px 0px;
+    font-size: 60px;
+    font-weight: 500;
+    background-image: linear-gradient(30deg, #fff, #DAC8FF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.discoverContantTextContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+
+
+@media (max-width: 1200px) {
+    .discoverCryptocurrencySection{
+        padding: 0px 20px;
+    }
+    .discoverCryptocurrencyContainer {
+        grid-template-columns: 1fr;
+        gap: 90px;
+        justify-content: center;
+        text-align: center;
+        height: auto;
+    }
+    .cryptocurrencyBackground {
+        display: none;
+    }
+
+    .discoverCryptocurrencyContainer img {
+        display: none;
+    }
+
+    .discoverContantContainer h1 {
+        font-size: 45px;
+    }
+
+    .discoverContantTextContainer {
+        font-size: 18px;
+    }
+}
+
+/* Media Query for screens smaller than 900px */
+@media (max-width: 900px) {
+    .discoverCryptocurrencyContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .discoverContantContainer h1 {
+        font-size: 35px;
+        padding: 30px 0;
+    }
+
+    .discoverContantTextContainer {
+        font-size: 16px;
+    }
+}
+
+/* Media Query for screens smaller than 600px */
+@media (max-width: 600px) {
+
+    .discoverCryptocurrencyContainer img {
+        width: 200px;
+    }
+
+    .discoverContantContainer h1 {
+        font-size: 28px;
+        padding: 20px 0;
+    }
+
+    .discoverContantTextContainer {
+        font-size: 14px;
+    }
+}
